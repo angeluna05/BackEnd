@@ -1,14 +1,10 @@
-# Usar una imagen base de Java
+# Usa una imagen base que tenga Java
 FROM openjdk:11-jre-slim
-
-# Establecer el directorio de trabajo en el contenedor
+# Establece el directorio de trabajo dentro del contenedor
 WORKDIR /app
-
-# Copiar el archivo JAR desde el directorio target
-COPY target/Ytalent-Backend-0.0.1-SNAPSHOT.jar /app/Ytalent-Backend.jar
-
-# Exponer el puerto donde la aplicación escuchará
+# Copia el archivo JAR generado en el directorio 'target' en tu máquina local al contenedor
+COPY Ytalent-Backend/target/Ytalent-Backend-0.0.1-SNAPSHOT.jar /app/Ytalent-Backend.jar
+# Expone el puerto 8080
 EXPOSE 8080
-
-# Ejecutar la aplicación Java
+# Comando para ejecutar la aplicación
 ENTRYPOINT ["java", "-jar", "Ytalent-Backend.jar"]
