@@ -1,14 +1,14 @@
 # Usar una imagen base de Java
-FROM eclipse-temurin:17-jdk-alpine
+FROM openjdk:11-jre-slim
 
-# Establecer el directorio de trabajo
+# Establecer el directorio de trabajo en el contenedor
 WORKDIR /app
 
-# Copiar el archivo JAR generado por Maven
-COPY target/Ytalent-Backend-0.0.1-SNAPSHOT.jar app.jar
+# Copiar el archivo JAR desde el directorio target
+COPY target/Ytalent-Backend-0.0.1-SNAPSHOT.jar /app/Ytalent-Backend.jar
 
-# Exponer el puerto (Render asignará uno dinámicamente)
+# Exponer el puerto donde la aplicación escuchará
 EXPOSE 8080
 
-# Comando para ejecutar tu aplicación
-CMD ["java", "-jar", "app.jar"]
+# Ejecutar la aplicación Java
+ENTRYPOINT ["java", "-jar", "Ytalent-Backend.jar"]
