@@ -19,7 +19,7 @@ public class AuthResponse {
     String token;
     String rolName;
     String message;
-    List<String> permisos;
+    String permisos;
     private Usuarios user;
     private Map<String, String> errors; // Campo para errores de validación
 }
