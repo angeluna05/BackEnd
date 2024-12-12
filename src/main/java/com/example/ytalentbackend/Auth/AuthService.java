@@ -47,10 +47,10 @@ public class AuthService {
         Roles rol = rolesRepository.findById(user.getRolid().getId())
                 .orElseThrow(() -> new RuntimeException("Rol no encontrado"));
 
-        List<String> permisos = userRepository.findPermisosByUsuarioId(user.getRolid().getId());
-        permisos.add("JOVEN");
-        permisos.add("ADMIN");
-        permisos.add("EMPLEADO");
+        // List<String> permisos = userRepository.findPermisosByUsuarioId(user.getRolid().getId());
+        // permisos.add("JOVEN");
+        // permisos.add("ADMIN");
+        // permisos.add("EMPLEADO");
 
         // Generar el token JWT
         String token = jwtService.getToken(user);
@@ -59,7 +59,7 @@ public class AuthService {
                 .token(token)
                 .rolName(rol.getNombre()) // Asume que el rol tiene un método getName()
                 .message("Inicio de sesión exitoso")
-                .permisos(permisos)
+                .permisos("")
                 .user(user) // Añadido
                 .build();
     }
@@ -107,15 +107,15 @@ public class AuthService {
     
         // Generar token y permisos
         String token = jwtService.getToken(user);
-        List<String> permisos = userRepository.findPermisosByUsuarioId(user.getRolid().getId());
-        permisos.add(rol.getNombre());
+        // List<String> permisos = userRepository.findPermisosByUsuarioId(user.getRolid().getId());
+        // permisos.add(rol.getNombre());
     
         return AuthResponse.builder()
                 .token(token)
                 .rolName(rol.getNombre())
                 .message("Registro exitoso.")
                 .user(user)
-                .permisos(permisos)
+                .permisos("")
                 .build();
     }
     
