@@ -14,11 +14,12 @@ public interface UsuariosRepository extends JpaRepository<Usuarios,Integer> {
     Optional<Usuarios> findByCorreo(String correo);
     Optional<Usuarios> findById(Integer id);
 
-    @Query(value = "SELECT p.nombre " +
-            "FROM usuarios us " +
-            "INNER JOIN Roles r ON us.rolid = r.rolid " +
-            "INNER JOIN PermisosRoles pr ON r.rolid = pr.rolid " +
-            "INNER JOIN Permisos p ON p.permisosid = pr.permisosid " +
-            "WHERE us.usuarioid = :usuarioid", nativeQuery = true)
-    List<String> findPermisosByUsuarioId(@Param("usuarioid") Integer usuarioId);
+
+    // @Query(value = "SELECT p.nombre " +
+    //         "FROM Usuarios us " +
+    //         "INNER JOIN Roles r ON us.rolid = r.rolid " +
+    //         "INNER JOIN PermisosRoles pr ON r.rolid = pr.rolid " +
+    //         "INNER JOIN Permisos p ON p.permisosid = pr.permisosid " +
+    //         "WHERE us.usuarioid = :usuarioid", nativeQuery = true)
+    // List<String> findPermisosByUsuarioId(@Param("usuarioid") Integer usuarioId);
 }
