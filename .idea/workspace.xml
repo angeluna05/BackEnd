@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d9d39c12-23e5-4e95-bef1-517e9c899ee8" name="Changes" comment="Muchas partes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/AuthResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/BlacklistService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/LogoutRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/PasswordRecoveryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Auth/RegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Config/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Config/CustomAuthorizationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Config/DataInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Config/MailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Config/PermissionBasedRequestMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/InscripcionCelulasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/JovenesequiposController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/PasswordRecoveryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Jwt/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Jwt/JwtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Equipos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Equiposretos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/InscripcionCelulas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Jovenesequipos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Permisosroles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/EquiposRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/EquiposretosRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/InscripcionCelulasRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/JovenesequiposRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/VerificationCodeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/EmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/EquiposService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/EstadoSchedulerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/InscripcionCelulasService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/JovenesequiposService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/PasswordResetService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/PermisosrolesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/VerificationCodeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/User/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/User/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Utils/VerificationCodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/CelulasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/CelulasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EmpleadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EmpleadosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EmpresaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EmpresaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EncargadosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EncargadosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EstadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EstadoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/InscripcionsesionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/InscripcionsesionesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/InstitucionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/InstitucionesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/JovenesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/JovenesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/JovenesinstitucionesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/JovenesinstitucionesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/LogrosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/LogrosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/PermisosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/PermisosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/ProgramarsesionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/ProgramarsesionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/RetosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/RetosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/RetosempresasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/RetosempresasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/RolesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/RolesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/TipoDocumentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/TipoDocumentoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/TipoinstitucionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EquiposretosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/TipousuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/EquiposController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/TipousuariospermisosController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/UsuariosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Controllers/UsuariosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Celulas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Celulas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Empleados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Empleados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Empresa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Empresa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Encargados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Encargados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Estado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Estado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Inscripcionsesiones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Inscripcionsesiones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Instituciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Instituciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Jovenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Jovenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Jovenesinstituciones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Jovenesinstituciones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Logros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Logros.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Permisos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Permisos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Programarsesion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Programarsesion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Retos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Retos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Retosempresas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Retosempresas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Roles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Roles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Tipodocumento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Tipodocumento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Tipoinstitucion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Tipousuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Tipousuariospermisos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Usuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Models/Usuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/EstadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/EstadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/InscripcionsesionesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/InscripcionsesionesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/LogrosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/LogrosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/PermisosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/PermisosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/RetosempresasRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/RetosempresasRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/RolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/RolesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/TipoinstitucionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/PermisosrolesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/TipousuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/TipousuariospermisosRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Repository/UsuariosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/User/UsuariosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/InscripcionsesionesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/InscripcionsesionesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/JovenesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/JovenesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/LogrosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/LogrosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/PermisosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/PermisosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/RolesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/RolesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/TipoinstitucionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/TipousuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/EquiposretosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/TipousuariospermisosService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/UsuariosService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/Services/UsuariosService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/YtalentBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ytalentbackend/YtalentBackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="com.intellij.jpb.JpaEntity" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2jTDOfe6CKjIzp0zifd0L06NBKs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.YtalentBackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Desktop/Ytalen-Frontend/YTALENT/Ytalent-Backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.springframework.security.config.annotation.web.builders" />
+      <recent name="com.example.ytalentbackend.Config" />
+      <recent name="com.example.ytalentbackend.Models" />
+      <recent name="com.example.ytalentbackend.Controllers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\YTALENT\Ytalent-Backend\src\main\resources\static\images" />
+      <recent name="C:\Users\Admin\YTALENT\Ytalent-Backend\src\main\java\com\example\ytalentbackend" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.ytalentbackend.Config" />
+      <recent name="com.example.ytalentbackend.Models" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.ytalentbackend.Auth" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="YtalentBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="Ytalent-Backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ytalentbackend.YtalentBackendApplication" />
+      <option name="VM_PARAMETERS" value="-XX:MaxMetaspaceSize=512m" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d9d39c12-23e5-4e95-bef1-517e9c899ee8" name="Changes" comment="" />
+      <created>1721402149272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721402149272</updated>
+      <workItem from="1721402150269" duration="9840000" />
+      <workItem from="1721413391424" duration="167000" />
+      <workItem from="1721509212978" duration="11860000" />
+      <workItem from="1721675835306" duration="23908000" />
+      <workItem from="1721715545207" duration="490000" />
+      <workItem from="1721764446634" duration="5514000" />
+      <workItem from="1721771643912" duration="11562000" />
+      <workItem from="1721827055741" duration="18874000" />
+      <workItem from="1722265981509" duration="54719000" />
+      <workItem from="1722528610886" duration="25120000" />
+      <workItem from="1722710225049" duration="8813000" />
+      <workItem from="1722722629501" duration="87614000" />
+      <workItem from="1723080386329" duration="9449000" />
+      <workItem from="1723581994930" duration="2432000" />
+      <workItem from="1723586807353" duration="8850000" />
+      <workItem from="1723612120288" duration="2363000" />
+      <workItem from="1723651879780" duration="4503000" />
+      <workItem from="1723884768381" duration="9236000" />
+      <workItem from="1723936778774" duration="2251000" />
+      <workItem from="1724078611215" duration="10758000" />
+      <workItem from="1724159847763" duration="1719000" />
+      <workItem from="1724167323903" duration="4112000" />
+      <workItem from="1724173194406" duration="5382000" />
+      <workItem from="1724204468078" duration="10978000" />
+      <workItem from="1724226140944" duration="17500000" />
+      <workItem from="1724610257777" duration="4072000" />
+      <workItem from="1724630863816" duration="1290000" />
+      <workItem from="1724633380079" duration="6039000" />
+      <workItem from="1724688125919" duration="589000" />
+      <workItem from="1724782345266" duration="728000" />
+      <workItem from="1724783582457" duration="370000" />
+      <workItem from="1724784076261" duration="4852000" />
+      <workItem from="1724858771719" duration="2666000" />
+      <workItem from="1724937242619" duration="3080000" />
+      <workItem from="1724944398980" duration="1567000" />
+      <workItem from="1725146515869" duration="4419000" />
+      <workItem from="1725209393022" duration="2421000" />
+      <workItem from="1725212418796" duration="5523000" />
+      <workItem from="1725231734818" duration="1536000" />
+      <workItem from="1725372675132" duration="1715000" />
+      <workItem from="1725376236728" duration="6971000" />
+      <workItem from="1725389315663" duration="8036000" />
+      <workItem from="1725478304702" duration="1056000" />
+      <workItem from="1725673585912" duration="10198000" />
+      <workItem from="1725746299565" duration="3986000" />
+      <workItem from="1725761118946" duration="2077000" />
+      <workItem from="1725763265752" duration="296000" />
+      <workItem from="1725776162044" duration="813000" />
+      <workItem from="1725779894374" duration="5612000" />
+      <workItem from="1725798081859" duration="16775000" />
+      <workItem from="1725843815113" duration="5496000" />
+      <workItem from="1725884570779" duration="4682000" />
+      <workItem from="1726016837431" duration="708000" />
+      <workItem from="1726068558793" duration="1112000" />
+      <workItem from="1726071033285" duration="6253000" />
+      <workItem from="1726161838632" duration="7638000" />
+      <workItem from="1726195717270" duration="1361000" />
+      <workItem from="1726335511662" duration="5588000" />
+      <workItem from="1726350550523" duration="8277000" />
+      <workItem from="1726422508685" duration="2018000" />
+      <workItem from="1726431344943" duration="853000" />
+      <workItem from="1726444507730" duration="3079000" />
+      <workItem from="1726666467407" duration="507000" />
+      <workItem from="1726667309743" duration="2231000" />
+      <workItem from="1726670369461" duration="182000" />
+      <workItem from="1726670639130" duration="2851000" />
+      <workItem from="1726674254265" duration="9320000" />
+      <workItem from="1726701727246" duration="1183000" />
+      <workItem from="1726719004646" duration="1274000" />
+      <workItem from="1726734796780" duration="140000" />
+      <workItem from="1726744525693" duration="620000" />
+      <workItem from="1726747922006" duration="1259000" />
+      <workItem from="1726762185654" duration="304000" />
+      <workItem from="1726787066796" duration="671000" />
+      <workItem from="1727913153474" duration="4000" />
+      <workItem from="1729189122993" duration="662000" />
+      <workItem from="1729451755406" duration="96000" />
+      <workItem from="1729540774160" duration="4197000" />
+      <workItem from="1729605430742" duration="724000" />
+      <workItem from="1729612941778" duration="2599000" />
+      <workItem from="1729879228344" duration="3529000" />
+      <workItem from="1730161964751" duration="909000" />
+      <workItem from="1730163879078" duration="1295000" />
+      <workItem from="1730620431651" duration="9000" />
+      <workItem from="1730640836664" duration="2000" />
+      <workItem from="1730988969620" duration="697000" />
+      <workItem from="1730991802186" duration="4691000" />
+      <workItem from="1731074815145" duration="723000" />
+      <workItem from="1731680115235" duration="2637000" />
+      <workItem from="1731682923225" duration="1673000" />
+      <workItem from="1732024722736" duration="5000" />
+    </task>
+    <task id="LOCAL-00001" summary="Muchas partes">
+      <option name="closed" value="true" />
+      <created>1722366933378</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722366933379</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primera parte" />
+    <MESSAGE value="Muchas partes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Muchas partes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLIntegrityConstraintViolationException" package="java.sql" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
