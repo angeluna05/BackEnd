@@ -69,7 +69,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200", "http://localhost:50296", "http://192.168.1.11:4200")); // Permite solicitudes desde tu frontend Angular
+        configuration.setAllowedOrigins(Arrays.asList("https://front-end-udo9.onrender.com", "https://backend-do1k.onrender.com")); // Permite solicitudes desde tu frontend Angular
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
