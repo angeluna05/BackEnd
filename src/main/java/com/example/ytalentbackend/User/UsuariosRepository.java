@@ -15,7 +15,7 @@ public interface UsuariosRepository extends JpaRepository<Usuarios,Integer> {
     Optional<Usuarios> findById(Integer id);
 
     @Query(value = "SELECT p.nombre " +
-            "FROM Usuarios us " +
+            "FROM usuarios us " +
             "INNER JOIN Roles r ON us.rolid = r.rolid " +
             "INNER JOIN PermisosRoles pr ON r.rolid = pr.rolid " +
             "INNER JOIN Permisos p ON p.permisosid = pr.permisosid " +
