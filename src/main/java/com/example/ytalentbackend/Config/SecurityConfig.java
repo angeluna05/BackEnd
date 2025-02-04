@@ -1,9 +1,10 @@
 package com.example.ytalentbackend.Config;
 
-import com.example.ytalentbackend.Jwt.JwtAuthenticationFilter;
-import com.example.ytalentbackend.Models.Permisosroles;
-import com.example.ytalentbackend.Services.PermisosrolesService;
-import lombok.RequiredArgsConstructor;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -15,10 +16,11 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import com.example.ytalentbackend.Jwt.JwtAuthenticationFilter;
+import com.example.ytalentbackend.Models.Permisosroles;
+import com.example.ytalentbackend.Services.PermisosrolesService;
+
+import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor
