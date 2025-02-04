@@ -69,7 +69,6 @@ public class SecurityConfig {
                 .build();
     }
     @Bean
-    @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(Arrays.asList("https://front-end-udo9.onrender.com", "https://backend-do1k.onrender.com"));
