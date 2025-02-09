@@ -1,6 +1,9 @@
 package com.example.ytalentbackend.Config;
 
-import java.util.List;
+import com.example.ytalentbackend.Jwt.JwtAuthenticationFilter;
+import com.example.ytalentbackend.Models.Permisosroles;
+import com.example.ytalentbackend.Services.PermisosrolesService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -12,35 +15,63 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import lombok.RequiredArgsConstructor;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Configuration
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    private final JwtAuthenticationFilter jwtAuthFilter;
-    private final AuthenticationProvider authenticationProvider;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final AuthenticationProvider authProvider;
+    private final PermisosrolesService permisosRolesService;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf(csrf -> csrf.disable())
-            .cors(cors -> cors.configurationSource(corsConfigurationSource()))
-            .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()) // Permitir acceso a todas las rutas
-            .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .authenticationProvider(authenticationProvider)
-            .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+        // Cargar permisos y roles
+        List<Permisosroles> permisosRoles = permisosRolesService.obtenerTodosLosPermisosRoles();
+        Map<String, List<String>> permisosPorRol = permisosRoles.stream()
+                .collect(Collectors.groupingBy(
+                        pr -> pr.getRolid().getNombre(), // Usa el nombre del rol tal como está en el token
+                        Collectors.mapping(pr -> pr.getPermisosid().getNombre(), Collectors.toList())
+                ));
 
-        return http.build();
+        // Imprimir permisosPorRol en consola
+        // System.out.println("Permisos por Rol (en SecurityConfig):");
+        // permisosPorRol.forEach((rol, permisos) -> {
+        //     System.out.println("Rol: " + rol + " -> Permisos: " + permisos);
+        // });
+
+        // Configuración de seguridad
+        return http
+                .csrf(cs -> cs.disable()) // Deshabilitar CSRF si es necesario
+                .cors(cors -> cors.configurationSource(corsConfigurationSource()))
+                .authorizeHttpRequests(authRequest -> authRequest
+                        .requestMatchers("/api/**").permitAll() // Permitir acceso sin autenticación
+                        .requestMatchers("/usuarios/**").permitAll() // Permitir acceso sin autenticación
+                        .requestMatchers("/tipodocumentos/**").permitAll() // Permitir acceso sin autenticación
+                        .requestMatchers("/instituciones/**").permitAll() // Permitir acceso sin autenticación
+                        .requestMatchers("/roles/**").permitAll() // Permitir acceso sin autenticación
+                        .requestMatchers("/estado/**").permitAll() // Permitir acceso sin autenticación
+                        .requestMatchers("/programarsesionprogramarsesion/**").permitAll() // Permitir acceso sin autenticación
+                        .requestMatchers("/**").authenticated() // Permitir acceso con autenticación
+                //        .requestMatchers(new PermissionBasedRequestMatcher(permisosPorRol)).authenticated() // Permitir acceso basado en permisos
+
+                )
+                .sessionManagement(sessionManager ->
+                        sessionManager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .authenticationProvider(authProvider)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
     }
-
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("*")); // Permitir cualquier origen
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Permitir todos los métodos
-        configuration.setAllowedHeaders(List.of("*")); // Permitir todos los encabezados
-        configuration.setExposedHeaders(List.of("Authorization"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200", "http://localhost:50296", "https://front-end-udo9.onrender.com")); // Permite solicitudes desde tu frontend Angular
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
