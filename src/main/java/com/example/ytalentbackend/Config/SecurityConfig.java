@@ -28,28 +28,17 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        // Cargar permisos y roles desde la BD
-        List<Permisosroles> permisosRoles = permisosRolesService.obtenerTodosLosPermisosRoles();
-        Map<String, List<String>> permisosPorRol = permisosRoles.stream()
-                .collect(Collectors.groupingBy(
-                        pr -> pr.getRolid().getNombre(), // Usa el nombre del rol tal como está en el token
-                        Collectors.mapping(pr -> pr.getPermisosid().getNombre(), Collectors.toList())
-                ));
-
         return http
-                .csrf(cs -> cs.disable()) // Deshabilitar CSRF si es necesario
-                .cors().and() // 🔥 Ahora CORS lo maneja `SimpleCorsFilter`
-                .authorizeHttpRequests(authRequest -> authRequest
-                        .requestMatchers("/api/**", "/usuarios/**", "/tipodocumentos/**", 
-                                         "/instituciones/**", "/roles/**", "/estado/**", 
-                                         "/programarsesion/**") // 🔥 Corregí el doble `programarsesion`
-                        .permitAll()
-                        .requestMatchers("/**").authenticated() // Rutas protegidas
+                .csrf(cs -> cs.disable()) 
+                .cors(cors -> cors.disable()) // Deshabilita CORS en Spring Security para usar CorsFilter
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/**").permitAll() // 🚀 Permite acceso sin autenticación
+                        .anyRequest().authenticated()
                 )
-                .sessionManagement(sessionManager ->
-                        sessionManager.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
+    
 }
