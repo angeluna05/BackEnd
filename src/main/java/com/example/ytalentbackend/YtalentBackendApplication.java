@@ -19,7 +19,7 @@ public class YtalentBackendApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("https://front-end-udo9.onrender.com").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("https://front-end-udo9.onrender.com");
 			}
 		};
 	}
