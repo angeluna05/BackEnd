@@ -1,9 +1,10 @@
 package com.example.ytalentbackend.Config;
 
-import com.example.ytalentbackend.Jwt.JwtAuthenticationFilter;
-import com.example.ytalentbackend.Models.Permisosroles;
-import com.example.ytalentbackend.Services.PermisosrolesService;
-import lombok.RequiredArgsConstructor;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -15,10 +16,11 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+import com.example.ytalentbackend.Jwt.JwtAuthenticationFilter;
+import com.example.ytalentbackend.Models.Permisosroles;
+import com.example.ytalentbackend.Services.PermisosrolesService;
+
+import lombok.RequiredArgsConstructor;
 
 @Configuration
 @RequiredArgsConstructor
@@ -69,7 +71,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:4200", "http://localhost:50296", "https://front-end-udo9.onrender.com")); // Permite solicitudes desde tu frontend Angular
+        configuration.setAllowedOrigins(Arrays.asList("https://front-end-udo9.onrender.com", "http://localhost:4200")); // Permite solicitudes desde tu frontend Angular
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
