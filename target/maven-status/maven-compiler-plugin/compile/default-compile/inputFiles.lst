@@ -36,7 +36,7 @@ C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Controll
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Controllers\RetosempresasController.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Controllers\RolesController.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Controllers\TipoDocumentoController.java
-C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Controllers\UsuariosController.java
+C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Controllers\usuariosController.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Jwt\JwtAuthenticationFilter.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Jwt\JwtService.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Models\Celulas.java
@@ -60,7 +60,7 @@ C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Models\R
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Models\Retosempresas.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Models\Roles.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Models\Tipodocumento.java
-C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Models\Usuarios.java
+C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Models\usuarios.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Repository\CelulasRepository.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Repository\EmpleadosRepository.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Repository\EmpresaRepository.java
@@ -108,10 +108,10 @@ C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Services
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Services\RolesService.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Services\SpringBootTest.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Services\TipoDocumentoService.java
-C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Services\UsuariosService.java
+C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Services\usuariosService.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Services\VerificationCodeService.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\User\Role.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\User\UserResponse.java
-C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\User\UsuariosRepository.java
+C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\User\usuariosRepository.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Utils\VerificationCodeGenerator.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\YtalentBackendApplication.java

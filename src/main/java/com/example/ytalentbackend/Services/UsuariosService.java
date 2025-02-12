@@ -2,9 +2,9 @@ package com.example.ytalentbackend.Services;
 
 
 import com.example.ytalentbackend.Models.Estado;
-import com.example.ytalentbackend.Models.Usuarios;
+import com.example.ytalentbackend.Models.usuarios;
 import com.example.ytalentbackend.Services.EmailService;
-import com.example.ytalentbackend.User.UsuariosRepository;
+import com.example.ytalentbackend.User.usuariosRepository;
 import com.example.ytalentbackend.Repository.EstadoRepository;
 
 import jakarta.mail.MessagingException;
@@ -19,10 +19,10 @@ import java.util.Optional;
 import java.util.Random;
 
 @Service
-public class UsuariosService {
+public class usuariosService {
 
     @Autowired
-    private UsuariosRepository usuarioRepository;
+    private usuariosRepository usuarioRepository;
 
     @Autowired
     private EmailService emailService;
@@ -34,19 +34,19 @@ public class UsuariosService {
     @Autowired
     private EstadoRepository estadoRepository;
 
-    public List<Usuarios> findAll() {
+    public List<usuarios> findAll() {
         return usuarioRepository.findAll();
     }
 
-    public Optional<Usuarios> findById(Integer id) {
+    public Optional<usuarios> findById(Integer id) {
         return usuarioRepository.findById(id);
     }
 
-    public Usuarios save(Usuarios usuarios) {
+    public usuarios save(usuarios usuarios) {
         return usuarioRepository.save(usuarios);
     }
 
-    public List<Usuarios> saveAll(List<Usuarios> usuariosList) {
+    public List<usuarios> saveAll(List<usuarios> usuariosList) {
         return usuarioRepository.saveAll(usuariosList);
     }
 
@@ -54,14 +54,14 @@ public class UsuariosService {
         usuarioRepository.deleteById(id);
     }
 
-    public Optional<Usuarios> findByCorreo(String correo) {
+    public Optional<usuarios> findByCorreo(String correo) {
         return usuarioRepository.findByCorreo(correo);
     }
 
-    public Usuarios updateEstado(Integer usuarioid, Integer estadoId) {
-        Optional<Usuarios> usuarioOptional = usuarioRepository.findById(usuarioid);
+    public usuarios updateEstado(Integer usuarioid, Integer estadoId) {
+        Optional<usuarios> usuarioOptional = usuarioRepository.findById(usuarioid);
         if (usuarioOptional.isPresent()) {
-            Usuarios usuarios = usuarioOptional.get();
+            usuarios usuarios = usuarioOptional.get();
             Optional<Estado> estadoOptional = estadoRepository.findById(estadoId);
             if (estadoOptional.isPresent()) {
                 Estado estado = estadoOptional.get();
@@ -85,9 +85,9 @@ public class UsuariosService {
     }
 
     public void sendPasswordRecoveryEmail(String correo) {
-        Optional<Usuarios> optionalUsuario = findByCorreo(correo);
+        Optional<usuarios> optionalUsuario = findByCorreo(correo);
         if (optionalUsuario.isPresent()) {
-            Usuarios usuario = optionalUsuario.get();
+            usuarios usuario = optionalUsuario.get();
             String code = generateVerificationCode();
             saveVerificationCode(usuario.getId(), code);
             String subject = "Recuperar contraseña";

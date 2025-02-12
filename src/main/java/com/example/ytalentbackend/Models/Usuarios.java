@@ -18,7 +18,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @AllArgsConstructor
 @Entity
 @Table(name="usuarios", uniqueConstraints = {@UniqueConstraint(columnNames = {"correo"})})
-public class Usuarios implements UserDetails {
+public class usuarios implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "usuarioid", nullable = false)
@@ -95,10 +95,10 @@ public class Usuarios implements UserDetails {
         return true;
     }
 
-    public Usuarios(Integer id) {
+    public usuarios(Integer id) {
         this.id = id;
     }
-    public Usuarios() {
+    public usuarios() {
 
     }
 }

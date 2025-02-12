@@ -13,11 +13,11 @@ import com.example.ytalentbackend.Jwt.JwtService;
 import com.example.ytalentbackend.Models.Estado;
 import com.example.ytalentbackend.Models.Jovenes;
 import com.example.ytalentbackend.Models.Roles;
-import com.example.ytalentbackend.Models.Usuarios;
+import com.example.ytalentbackend.Models.usuarios;
 import com.example.ytalentbackend.Repository.EstadoRepository;
 import com.example.ytalentbackend.Repository.RolesRepository;
 import com.example.ytalentbackend.Services.JovenesService;
-import com.example.ytalentbackend.User.UsuariosRepository;
+import com.example.ytalentbackend.User.usuariosRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +26,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class AuthService {
 
-    private final UsuariosRepository userRepository;
+    private final usuariosRepository userRepository;
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
     private final EstadoRepository estadoRepository;
@@ -41,7 +41,7 @@ public class AuthService {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getCorreo(), request.getContrasena()));
 
         // Obtener detalles del usuario
-        Usuarios user = userRepository.findByCorreo(request.getCorreo()).orElseThrow();
+        usuarios user = userRepository.findByCorreo(request.getCorreo()).orElseThrow();
 
         // Obtener el rol por ID
         Roles rol = rolesRepository.findById(user.getRolid().getId())
@@ -66,7 +66,7 @@ public class AuthService {
 
     public AuthResponse register(RegisterRequest request) {
         // Verifica si el usuario ya existe
-        Optional<Usuarios> existingUser = userRepository.findByCorreo(request.getCorreo());
+        Optional<usuarios> existingUser = userRepository.findByCorreo(request.getCorreo());
         if (existingUser.isPresent()) {
             throw new IllegalArgumentException("Ya existe un usuario con ese correo.");
         }
@@ -78,7 +78,7 @@ public class AuthService {
                 .orElseThrow(() -> new EntityNotFoundException("Rol no encontrado."));
     
         // Crear el usuario
-        Usuarios user = Usuarios.builder()
+        usuarios user = usuarios.builder()
                 .nombre(request.getNombre())
                 .correo(request.getCorreo())
                 .contrasena(passwordEncoder.encode(request.getContrasena()))

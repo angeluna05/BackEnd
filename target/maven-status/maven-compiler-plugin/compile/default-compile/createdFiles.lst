@@ -2,7 +2,7 @@ com\example\ytalentbackend\Controllers\GlobalExceptionHandler.class
 com\example\ytalentbackend\Auth\AuthController.class
 com\example\ytalentbackend\Repository\PermisosrolesRepository.class
 com\example\ytalentbackend\Services\EncargadosService.class
-com\example\ytalentbackend\Services\UsuariosService$VerificationCode.class
+com\example\ytalentbackend\Services\usuariosService$VerificationCode.class
 com\example\ytalentbackend\User\UserResponse.class
 com\example\ytalentbackend\Services\ProgramarsesionService.class
 com\example\ytalentbackend\Jwt\JwtAuthenticationFilter.class
@@ -24,11 +24,11 @@ com\example\ytalentbackend\Models\Logros.class
 com\example\ytalentbackend\Models\Encargados.class
 com\example\ytalentbackend\Models\Estado.class
 com\example\ytalentbackend\Controllers\PermisosController.class
-com\example\ytalentbackend\User\UsuariosRepository.class
+com\example\ytalentbackend\User\usuariosRepository.class
 com\example\ytalentbackend\User\UserResponse$UserResponseBuilder.class
 com\example\ytalentbackend\Auth\BlacklistService.class
 com\example\ytalentbackend\Controllers\ProgramarsesionController.class
-com\example\ytalentbackend\Services\UsuariosService.class
+com\example\ytalentbackend\Services\usuariosService.class
 com\example\ytalentbackend\Models\Empresa.class
 com\example\ytalentbackend\Services\JovenesinstitucionesService.class
 com\example\ytalentbackend\Services\CelulasService.class
@@ -82,13 +82,13 @@ com\example\ytalentbackend\Repository\EmpleadosRepository.class
 com\example\ytalentbackend\Repository\CelulasRepository.class
 com\example\ytalentbackend\Services\LogrosService.class
 com\example\ytalentbackend\Controllers\RetosempresasController.class
-com\example\ytalentbackend\Models\Usuarios$UsuariosBuilder.class
+com\example\ytalentbackend\Models\usuarios$usuariosBuilder.class
 com\example\ytalentbackend\Auth\LoginRequest$LoginRequestBuilder.class
 com\example\ytalentbackend\Auth\LoginRequest.class
 com\example\ytalentbackend\Repository\RetosRepository.class
 com\example\ytalentbackend\Services\EmailService.class
 com\example\ytalentbackend\Controllers\JovenesinstitucionesController.class
-com\example\ytalentbackend\Models\Usuarios.class
+com\example\ytalentbackend\Models\usuarios.class
 com\example\ytalentbackend\Controllers\PermisosrolesController.class
 com\example\ytalentbackend\Models\Equipos.class
 com\example\ytalentbackend\Models\Permisos.class
@@ -117,7 +117,7 @@ com\example\ytalentbackend\Services\JovenesService.class
 com\example\ytalentbackend\Services\PermisosrolesService.class
 com\example\ytalentbackend\Services\EmpleadosService.class
 com\example\ytalentbackend\Config\SecurityConfig.class
-com\example\ytalentbackend\Controllers\UsuariosController.class
+com\example\ytalentbackend\Controllers\usuariosController.class
 com\example\ytalentbackend\Services\InscripcionCelulasService.class
 com\example\ytalentbackend\Repository\VerificationCodeRepository.class
 com\example\ytalentbackend\Repository\RolesRepository.class

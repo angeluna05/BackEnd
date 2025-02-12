@@ -1,8 +1,8 @@
 package com.example.ytalentbackend.Controllers;
 
 import com.example.ytalentbackend.Auth.PasswordRecoveryRequest;
-import com.example.ytalentbackend.Services.UsuariosService;
-import com.example.ytalentbackend.Models.Usuarios;
+import com.example.ytalentbackend.Services.usuariosService;
+import com.example.ytalentbackend.Models.usuarios;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class PasswordRecoveryController {
 
-    private final UsuariosService usuariosService;
+    private final usuariosService usuariosService;
 
     @PostMapping("/send-code")
     public ResponseEntity<ApiResponse> sendRecoveryCode(@RequestBody PasswordRecoveryRequest request) {
@@ -48,10 +48,10 @@ public class PasswordRecoveryController {
         String newPassword = request.getNewPassword();
         Integer userId = request.getUserId();
 
-        Optional<Usuarios> optionalUsuario = usuariosService.findById(userId);
+        Optional<usuarios> optionalUsuario = usuariosService.findById(userId);
 
         if (optionalUsuario.isPresent()) {
-            Usuarios usuario = optionalUsuario.get();
+            usuarios usuario = optionalUsuario.get();
             usuario.setContrasena(encryptPassword(newPassword)); // Asegúrate de encriptar la contraseña
             usuariosService.save(usuario);
             return ResponseEntity.ok(new ApiResponse("Contraseña restablecida exitosamente. " +newPassword));

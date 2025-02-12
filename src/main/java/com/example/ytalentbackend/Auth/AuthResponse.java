@@ -1,6 +1,6 @@
 package com.example.ytalentbackend.Auth;
 
-import com.example.ytalentbackend.Models.Usuarios;
+import com.example.ytalentbackend.Models.usuarios;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +20,6 @@ public class AuthResponse {
     String rolName;
     String message;
     String permisos;
-    private Usuarios user;
+    private usuarios user;
     private Map<String, String> errors; // Campo para errores de validación
 }

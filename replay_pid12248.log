@@ -58,7 +58,7 @@ instanceKlass com/example/ytalentbackend/Models/Inscripcionsesiones$HibernateIns
 instanceKlass com/example/ytalentbackend/Models/Roles$HibernateInstantiator$v5vaI39C
 instanceKlass com/example/ytalentbackend/Models/Encargados$HibernateInstantiator$kvJXUhpE
 instanceKlass com/example/ytalentbackend/Models/Jovenes$HibernateInstantiator$mf7dxIjY
-instanceKlass com/example/ytalentbackend/Models/Usuarios$HibernateInstantiator$07RStXqS
+instanceKlass com/example/ytalentbackend/Models/usuarios$HibernateInstantiator$07RStXqS
 instanceKlass com/example/ytalentbackend/Models/Instituciones$HibernateInstantiator$zaQ1BAa9
 instanceKlass com/example/ytalentbackend/Models/Retos$HibernateInstantiator$7YMBYvJO
 instanceKlass com/example/ytalentbackend/Models/Permisosroles$HibernateInstantiator$eOQrsWgg
@@ -68,7 +68,7 @@ instanceKlass com/example/ytalentbackend/Models/Programarsesion$HibernateInstant
 instanceKlass com/example/ytalentbackend/Models/InscripcionCelulas$HibernateInstantiator$OZ9mcWZR
 instanceKlass com/example/ytalentbackend/Models/Celulas$HibernateInstantiator$hNjYhCos
 instanceKlass com/example/ytalentbackend/Models/Equipos$HibernateInstantiator$jWCAEYeG
-instanceKlass com/example/ytalentbackend/Models/Usuarios$UsuariosBuilder
+instanceKlass com/example/ytalentbackend/Models/usuarios$usuariosBuilder
 instanceKlass com/example/ytalentbackend/Models/Roles$RolesBuilder
 instanceKlass com/example/ytalentbackend/Models/Permisosroles$PermisosrolesBuilder
 instanceKlass com/example/ytalentbackend/Models/Permisos$PermisosBuilder
@@ -88,7 +88,7 @@ instanceKlass com/example/ytalentbackend/Models/Permisos$PermisosBuilder
 # instanceKlass java/lang/invoke/LambdaForm$MH+0x000001c301b8a800
 # instanceKlass java/lang/invoke/LambdaForm$MH+0x000001c301a7c400
 # instanceKlass java/lang/invoke/LambdaForm$MH+0x000001c301ba1000
-instanceKlass com/example/ytalentbackend/User/UsuariosRepository
+instanceKlass com/example/ytalentbackend/User/usuariosRepository
 instanceKlass com/example/ytalentbackend/Models/Tipodocumento
 instanceKlass com/example/ytalentbackend/Repository/TipoDocumentoRepository
 instanceKlass com/example/ytalentbackend/Repository/RolesRepository
@@ -131,9 +131,9 @@ instanceKlass com/example/ytalentbackend/Repository/EmpleadosRepository
 instanceKlass com/example/ytalentbackend/Models/Celulas
 instanceKlass com/example/ytalentbackend/Repository/CelulasRepository
 instanceKlass com/example/ytalentbackend/Models/Permisosroles
-instanceKlass com/example/ytalentbackend/Models/Usuarios
+instanceKlass com/example/ytalentbackend/Models/usuarios
 instanceKlass com/example/ytalentbackend/Services/VerificationCodeService
-instanceKlass com/example/ytalentbackend/Services/UsuariosService
+instanceKlass com/example/ytalentbackend/Services/usuariosService
 instanceKlass com/example/ytalentbackend/Services/TipoDocumentoService
 instanceKlass com/example/ytalentbackend/Services/RolesService
 instanceKlass com/example/ytalentbackend/Services/RetosService
@@ -159,7 +159,7 @@ instanceKlass com/example/ytalentbackend/Services/EmailService
 instanceKlass com/example/ytalentbackend/Services/CelulasService
 instanceKlass com/example/ytalentbackend/Repository/VerificationCodeRepository
 instanceKlass com/example/ytalentbackend/Jwt/JwtService
-instanceKlass com/example/ytalentbackend/Controllers/UsuariosController
+instanceKlass com/example/ytalentbackend/Controllers/usuariosController
 instanceKlass com/example/ytalentbackend/Controllers/TipoDocumentoController
 instanceKlass com/example/ytalentbackend/Controllers/RolesController
 instanceKlass com/example/ytalentbackend/Controllers/RetosempresasController
@@ -3317,7 +3317,7 @@ instanceKlass com/example/ytalentbackend/Models/Roles$HibernateInstantiator$m57Z
 instanceKlass com/example/ytalentbackend/Models/Encargados$HibernateInstantiator$WLYbmdJl
 instanceKlass com/example/ytalentbackend/Models/Jovenes$HibernateInstantiator$TlhnZx87
 # instanceKlass java/lang/invoke/LambdaForm$MH+0x000001c301859c00
-instanceKlass com/example/ytalentbackend/Models/Usuarios$HibernateInstantiator$gqBXBoxE
+instanceKlass com/example/ytalentbackend/Models/usuarios$HibernateInstantiator$gqBXBoxE
 instanceKlass net/bytebuddy/description/type/TypeDescription$Generic$AnnotationReader$ForWildcardUpperBoundType$AnnotatedWildcardType
 instanceKlass net/bytebuddy/description/type/TypeDescription$Generic$AnnotationReader$ForTypeArgument$AnnotatedParameterizedType
 instanceKlass com/example/ytalentbackend/Models/Instituciones$HibernateInstantiator$PIZylAls
@@ -4287,7 +4287,7 @@ instanceKlass org/hibernate/usertype/ParameterizedType
 instanceKlass org/hibernate/boot/spi/MetadataContributor
 instanceKlass org/hibernate/annotations/common/reflection/java/generics/SimpleTypeEnvironment
 instanceKlass org/springframework/security/core/GrantedAuthority
-instanceKlass com/example/ytalentbackend/Models/Usuarios$UsuariosBuilder
+instanceKlass com/example/ytalentbackend/Models/usuarios$usuariosBuilder
 instanceKlass org/hibernate/mapping/Constraint
 instanceKlass sun/security/provider/ByteArrayAccess$LE
 instanceKlass  @bci org/hibernate/boot/model/naming/NamingHelper generateHashedConstraintName (Ljava/lang/String;Lorg/hibernate/boot/model/naming/Identifier;[Lorg/hibernate/boot/model/naming/Identifier;)Ljava/lang/String; 26 <appendix> argL0 ; # org/hibernate/boot/model/naming/NamingHelper$$Lambda+0x000001c3016fed80
@@ -7675,7 +7675,7 @@ instanceKlass  @bci org/springframework/data/repository/config/RepositoryBeanDef
 instanceKlass org/springframework/data/repository/config/NamedQueriesBeanDefinitionBuilder
 instanceKlass  @bci org/springframework/data/repository/config/RepositoryBeanDefinitionBuilder build (Lorg/springframework/data/repository/config/RepositoryConfiguration;)Lorg/springframework/beans/factory/support/BeanDefinitionBuilder; 110 <appendix> member <vmtarget> ; # org/springframework/data/repository/config/RepositoryBeanDefinitionBuilder$$Lambda+0x000001c3013a9408
 instanceKlass  @bci org/springframework/data/repository/config/DefaultRepositoryConfiguration getRepositoryFactoryBeanClassName ()Ljava/lang/String; 18 <appendix> member <vmtarget> ; # org/springframework/data/repository/config/DefaultRepositoryConfiguration$$Lambda+0x000001c3013a91e8
-instanceKlass com/example/ytalentbackend/User/UsuariosRepository
+instanceKlass com/example/ytalentbackend/User/usuariosRepository
 instanceKlass com/example/ytalentbackend/Models/Tipodocumento
 instanceKlass com/example/ytalentbackend/Repository/TipoDocumentoRepository
 instanceKlass com/example/ytalentbackend/Repository/RolesRepository
@@ -8068,7 +8068,7 @@ instanceKlass org/springframework/security/config/annotation/SecurityBuilder
 instanceKlass org/springframework/web/cors/CorsConfigurationSource
 instanceKlass org/springframework/core/annotation/AnnotatedElementUtils
 instanceKlass org/springframework/context/annotation/BeanAnnotationHelper
-instanceKlass com/example/ytalentbackend/Models/Usuarios
+instanceKlass com/example/ytalentbackend/Models/usuarios
 instanceKlass org/springframework/security/core/userdetails/UserDetailsService
 instanceKlass org/springframework/security/core/userdetails/UserDetails
 instanceKlass org/springframework/security/authentication/AuthenticationProvider
@@ -8197,7 +8197,7 @@ instanceKlass org/springframework/boot/autoconfigure/validation/PrimaryDefaultVa
 instanceKlass org/springframework/boot/autoconfigure/condition/ConditionalOnResource
 instanceKlass org/springframework/boot/autoconfigure/condition/ConditionalOnThreading
 instanceKlass com/example/ytalentbackend/Services/VerificationCodeService
-instanceKlass com/example/ytalentbackend/Services/UsuariosService
+instanceKlass com/example/ytalentbackend/Services/usuariosService
 instanceKlass com/example/ytalentbackend/Services/TipoDocumentoService
 instanceKlass com/example/ytalentbackend/Services/RolesService
 instanceKlass com/example/ytalentbackend/Services/RetosService
@@ -8223,7 +8223,7 @@ instanceKlass com/example/ytalentbackend/Services/EmailService
 instanceKlass com/example/ytalentbackend/Services/CelulasService
 instanceKlass com/example/ytalentbackend/Repository/VerificationCodeRepository
 instanceKlass com/example/ytalentbackend/Jwt/JwtService
-instanceKlass com/example/ytalentbackend/Controllers/UsuariosController
+instanceKlass com/example/ytalentbackend/Controllers/usuariosController
 instanceKlass com/example/ytalentbackend/Controllers/TipoDocumentoController
 instanceKlass com/example/ytalentbackend/Controllers/RolesController
 instanceKlass com/example/ytalentbackend/Controllers/RetosempresasController
@@ -11522,7 +11522,7 @@ instanceKlass jdk/internal/agent/Agent
 instanceKlass java/io/Reader
 instanceKlass com/intellij/rt/execution/application/AppMainV2
 instanceKlass  @bci jdk/internal/reflect/DirectConstructorHandleAccessor invokeImpl ([Ljava/lang/Object;)Ljava/lang/Object; 88 <adapter> ; # java/lang/invoke/LambdaForm$MH+0x000001c301002800
-instanceKlass  @bci com/example/ytalentbackend/Models/Usuarios getAuthorities ()Ljava/util/Collection; 11 <appendix> form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$MH+0x000001c301001800
+instanceKlass  @bci com/example/ytalentbackend/Models/usuarios getAuthorities ()Ljava/util/Collection; 11 <appendix> form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$MH+0x000001c301001800
 instanceKlass  @cpi com/example/ytalentbackend/Config/SecurityConfig 315 form vmentry <vmtarget> ; # java/lang/invoke/LambdaForm$DMH+0x000001c301001000
 instanceKlass com/intellij/rt/execution/application/AppMainV2$Agent
 instanceKlass java/security/SecureClassLoader$DebugHolder

@@ -1,8 +1,8 @@
 package com.example.ytalentbackend.Controllers;
 
 import com.example.ytalentbackend.Models.Instituciones;
-import com.example.ytalentbackend.Models.Usuarios;
-import com.example.ytalentbackend.Services.UsuariosService;
+import com.example.ytalentbackend.Models.usuarios;
+import com.example.ytalentbackend.Services.usuariosService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,44 +22,44 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/usuarios")
 @RequiredArgsConstructor
-public class UsuariosController {
+public class usuariosController {
 
     @Autowired
-    private UsuariosService service;
+    private usuariosService service;
 
     // Inyectamos el PasswordEncoder
     @Autowired
     private PasswordEncoder passwordEncoder;
 
     @GetMapping
-    public List<Usuarios> getAll() {
+    public List<usuarios> getAll() {
         return service.findAll();
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Usuarios> getById(@PathVariable Integer id) {
-        Optional<Usuarios> usuarios = service.findById(id);
+    public ResponseEntity<usuarios> getById(@PathVariable Integer id) {
+        Optional<usuarios> usuarios = service.findById(id);
         return usuarios.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public ResponseEntity<Usuarios> create(@Validated @RequestBody Usuarios usuarios) {
+    public ResponseEntity<usuarios> create(@Validated @RequestBody usuarios usuarios) {
         usuarios.setContrasena(passwordEncoder.encode(usuarios.getContrasena()));
-        Usuarios usuariosSaved = service.save(usuarios);
+        usuarios usuariosSaved = service.save(usuarios);
         return ResponseEntity.ok(usuariosSaved);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Usuarios> update(@PathVariable Integer id, @RequestBody Usuarios usuarios) {
+    public ResponseEntity<usuarios> update(@PathVariable Integer id, @RequestBody usuarios usuarios) {
         // Buscar si el usuario existe
-        Optional<Usuarios> existingUsuario = service.findById(id);
+        Optional<usuarios> existingUsuario = service.findById(id);
         
         if (!existingUsuario.isPresent()) {
             return ResponseEntity.notFound().build();  // Si no existe el usuario, devuelve 404
         }
     
-        Usuarios usuarioDB = existingUsuario.get();  // Usuario existente en la base de datos
+        usuarios usuarioDB = existingUsuario.get();  // Usuario existente en la base de datos
     
         // Actualiza los campos con los nuevos valores del objeto recibido
         usuarioDB.setCorreo(usuarios.getCorreo());
@@ -74,7 +74,7 @@ public class UsuariosController {
         }
     
         // Guardar el usuario actualizado
-        Usuarios updated = service.save(usuarioDB);
+        usuarios updated = service.save(usuarioDB);
         return ResponseEntity.ok(updated);
     }
     
@@ -96,16 +96,16 @@ public String encryptPassword(String password) {
     }
 
     @GetMapping("/find-by-correo")
-    public ResponseEntity<Optional<Usuarios>> getUserByCorreo(@RequestParam String correo) {
-        Optional<Usuarios> usuario = service.findByCorreo(correo);
+    public ResponseEntity<Optional<usuarios>> getUserByCorreo(@RequestParam String correo) {
+        Optional<usuarios> usuario = service.findByCorreo(correo);
         return usuario.isPresent() ? ResponseEntity.ok(usuario) : ResponseEntity.notFound().build();
     }
 
     @PutMapping("/{id}/estado")
-    public ResponseEntity<Usuarios> updateEstado(@PathVariable Integer id, @RequestBody Integer estadoId) {
-        Usuarios updateUsuarios = service.updateEstado(id, estadoId);
-        if (updateUsuarios != null) {
-            return ResponseEntity.ok(updateUsuarios);
+    public ResponseEntity<usuarios> updateEstado(@PathVariable Integer id, @RequestBody Integer estadoId) {
+        usuarios updateusuarios = service.updateEstado(id, estadoId);
+        if (updateusuarios != null) {
+            return ResponseEntity.ok(updateusuarios);
         } else {
             return ResponseEntity.notFound().build();
         }
