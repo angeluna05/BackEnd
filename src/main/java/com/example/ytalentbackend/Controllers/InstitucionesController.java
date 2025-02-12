@@ -10,7 +10,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -19,7 +18,6 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-
 @RequestMapping("/instituciones")
 @RequiredArgsConstructor
 
@@ -28,13 +26,11 @@ public class InstitucionesController {
     @Autowired
     private InstitucionesService service;
 
-    @CrossOrigin(origins = "https://front-end-udo9.onrender.com")
     @GetMapping
     public List<Instituciones> getAll() {
         return service.findAll();
     }
 
-    @CrossOrigin(origins = "https://front-end-udo9.onrender.com")
     @GetMapping("/{id}")
     public ResponseEntity<Instituciones> getById(@PathVariable Integer id) {
         Optional<Instituciones> instituciones = service.findById(id);
@@ -42,14 +38,12 @@ public class InstitucionesController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @CrossOrigin(origins = "https://front-end-udo9.onrender.com")
     @PostMapping
     public ResponseEntity<Instituciones> create(@Validated @RequestBody Instituciones institucionesList) {
         Instituciones institucionessaved = service.save(institucionesList);
         return ResponseEntity.ok(institucionessaved);
     }
 
-    @CrossOrigin(origins = "https://front-end-udo9.onrender.com")
     @PutMapping("/{id}")
     public ResponseEntity<Instituciones> update(@PathVariable Integer id, @RequestBody Instituciones instituciones) {
         if (!service.findById(id).isPresent()) {
@@ -68,8 +62,6 @@ public class InstitucionesController {
         service.deleteById(id);
         return ResponseEntity.noContent().build();
     }
-
-    @CrossOrigin(origins = "https://front-end-udo9.onrender.com")
     @PutMapping("/{id}/estado")
     public ResponseEntity<Instituciones> updateEstado(@PathVariable Integer id, @RequestBody Integer estadoId) {
         Instituciones updatedInstituciones = service.updateEstado(id, estadoId);
