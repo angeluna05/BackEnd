@@ -7,6 +7,7 @@ C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Auth\Log
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Auth\PasswordRecoveryRequest.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Auth\RegisterRequest.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Config\ApplicationConfig.java
+C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Config\CorsConfig.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Config\CustomAuthorizationFilter.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Config\DataInitializer.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Config\MailConfig.java
@@ -115,3 +116,4 @@ C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\User\Use
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\User\usuariosRepository.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\Utils\VerificationCodeGenerator.java
 C:\Users\Admin\Desktop\BackEnd\src\main\java\com\example\ytalentbackend\YtalentBackendApplication.java
+C:\Users\Admin\Desktop\BackEnd\src\main\java\org\springframework\web\bind\CrossOrigin.java
