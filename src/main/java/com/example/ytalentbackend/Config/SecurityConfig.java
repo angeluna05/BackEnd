@@ -31,9 +31,9 @@ public class SecurityConfig {
                 .csrf(cs -> cs.disable()) 
                 .cors(cors -> cors.disable()) // Deshabilita CORS en Spring Security para usar CorsFilter
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/tipodocumentos", "/estado").permitAll() // 🌟 Solo estas rutas son públicas
-                        .anyRequest().authenticated() // 🔒 El resto necesita autenticación
-                )
+                .requestMatchers("/**").permitAll() // 🚀 Permite todas las rutas temporalmente
+            )
+            
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
