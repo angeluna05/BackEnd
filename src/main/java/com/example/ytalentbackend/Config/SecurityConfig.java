@@ -13,7 +13,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.example.ytalentbackend.Jwt.JwtAuthenticationFilter;
-import com.example.ytalentbackend.Models.Permisosroles;
 import com.example.ytalentbackend.Services.PermisosrolesService;
 
 import lombok.RequiredArgsConstructor;
@@ -32,13 +31,12 @@ public class SecurityConfig {
                 .csrf(cs -> cs.disable()) 
                 .cors(cors -> cors.disable()) // Deshabilita CORS en Spring Security para usar CorsFilter
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/**").permitAll() // 🚀 Permite acceso sin autenticación
-                        .anyRequest().authenticated()
+                        .requestMatchers("/tipodocumentos", "/estado").permitAll() // 🌟 Solo estas rutas son públicas
+                        .anyRequest().authenticated() // 🔒 El resto necesita autenticación
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
-    
 }
