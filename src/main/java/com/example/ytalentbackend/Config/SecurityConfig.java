@@ -38,9 +38,9 @@ public class SecurityConfig {
             .cors(cors -> cors.configurationSource(corsConfigurationSource())) // 🔥 CORS desde aquí
             .csrf(csrf -> csrf.disable()) 
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/tipodocumentos").permitAll() // 🌟 Permitir endpoint específico
-                .anyRequest().authenticated()
-            )
+            .anyRequest().permitAll()
+        )
+        
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authenticationProvider(authProvider)
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
